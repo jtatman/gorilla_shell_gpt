@@ -1,6 +1,5 @@
+# Gorilla ShellGPT
 ### this repository attempts to connect to a public instance of the private model [Gorilla](https://gorilla.cs.berkeley.edu/). everything returned should be a recommended api call, designed to accomplish some specific technical task. 
-
-
 
 # original repo notes
 
@@ -11,9 +10,9 @@ https://user-images.githubusercontent.com/16740832/231569156-a3a9f9d4-18b1-4fff-
 
 ## Installation
 ```shell
-pip install shell-gpt
+pip install gorilla-shell-gpt
 ```
-You'll need an OpenAI API key, you can generate one [here](https://beta.openai.com/account/api-keys).
+You'll not really need an OpenAI API key, you can generate one [here](https://beta.openai.com/account/api-keys).
 
 If the`$OPENAI_API_KEY` environment variable is set it will be used, otherwise, you will be prompted for your key which will then be stored in `~/.config/shell_gpt/.sgptrc`.
 
