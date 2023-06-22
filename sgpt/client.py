@@ -82,7 +82,7 @@ class OpenAIClient:
     def get_completion(
         self,
         messages: List[Dict[str, str]],
-        model: str = "gpt-3.5-turbo",
+        model: str = "gorilla-7b-hf-v0",
         temperature: float = 1,
         top_probability: float = 1,
         caching: bool = True,
