@@ -1,4 +1,4 @@
-# this repository attempts to connect to a public instance of the private model [Gorilla](https://gorilla.cs.berkeley.edu/). everything returned should be a recommended api call, designed to accomplish some specific technical task. 
+### this repository attempts to connect to a public instance of the private model [Gorilla](https://gorilla.cs.berkeley.edu/). everything returned should be a recommended api call, designed to accomplish some specific technical task. 
 
 
 
