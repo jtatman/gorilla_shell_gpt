@@ -17,14 +17,16 @@ class OpenAIClient:
     cache = Cache(CACHE_LENGTH, CACHE_PATH)
 
     def __init__(self, api_host: str, api_key: str) -> None:
-        self.__api_key = api_key
-        self.api_host = api_host
+        #self.__api_key = api_key
+        #self.api_host = api_host
+        self.api_base = "http://34.132.127.197:8000/v1"
+        self.__api_key = "gorilla-7b-hf-v0"
 
     @cache
     def _request(
         self,
         messages: List[Dict[str, str]],
-        model: str = "gpt-3.5-turbo",
+        model: str = "gorilla-7b-hf-v0",
         temperature: float = 1,
         top_probability: float = 1,
     ) -> Generator[str, None, None]:
@@ -33,7 +35,7 @@ class OpenAIClient:
         https://platform.openai.com/docs/api-reference/chat
 
         :param messages: List of messages {"role": user or assistant, "content": message_string}
-        :param model: String gpt-3.5-turbo or gpt-3.5-turbo-0301
+        :param model: String - doesn't really matter with gorilla interface
         :param temperature: Float in 0.0 - 2.0 range.
         :param top_probability: Float in 0.0 - 1.0 range.
         :return: Response body JSON.
