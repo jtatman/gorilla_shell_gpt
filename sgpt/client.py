@@ -26,7 +26,7 @@ class OpenAIClient:
     def _request(
         self,
         messages: List[Dict[str, str]],
-        model: str = "gorilla-7b-hf-v1",
+        model: str = "gorilla-7b-tf-v1",
         temperature: float = 1,
         top_probability: float = 1,
     ) -> Generator[str, None, None]:
