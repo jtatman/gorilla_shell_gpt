@@ -357,12 +357,12 @@ class TestShellGpt(TestCase):
     def test_model_option(self, mocked_get_completion):
         dict_arguments = {
             "prompt": "What is the capital of the Czech Republic?",
-            "--model": "gpt-4",
+            "--model": "gorilla-7b-hf-v0",
         }
         result = runner.invoke(app, self.get_arguments(**dict_arguments))
         mocked_get_completion.assert_called_once_with(
             messages=ANY,
-            model="gpt-4",
+            model="gorilla-7b-hf-v0",
             temperature=0.1,
             top_probability=1.0,
             caching=False,

@@ -9,8 +9,9 @@ COPY . /app
 RUN pip install --no-cache --upgrade pip \
  && pip install --no-cache /app \
  && addgroup --system app && adduser --system --group app \
- && mkdir -p /tmp/shell_gpt \
- && chown -R app:app /tmp/shell_gpt
+ && mkdir -p /opt/shell_gpt \
+ && mkdir -p /nonexistent/.cache \
+ && chown -R app:app /opt/shell_gpt /nonexistent
 
 USER app
 
