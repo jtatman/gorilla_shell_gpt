@@ -15,13 +15,15 @@ class ModelOptions(str, Enum):
     https://platform.openai.com/docs/models/model-endpoint-compatibility
     """
 
-    #GPT4 = "gpt-4"
-    #GPT432k = "gpt-4-32k"
-    #GPT35TURBO = "gpt-3.5-turbo"
-    #GPT35TURBO16K = "gpt-3.5-turbo-16k"
+    GPT4 = "gpt-4"
+    GPT432k = "gpt-4-32k"
+    GPT35TURBO = "gpt-3.5-turbo"
+    GPT35TURBO0613 = "gpt-3.5-turbo-0613"
+    GPT35TURBO16K = "gpt-3.5-turbo-16k"
+    GPT35TURBO16K0613 = "gpt-3.5-turbo-16k-0613"
     GORILLAHFv0 = "gorilla-7b-hf-v0"
     GORILLAHFv1 = "gorilla-7b-hf-v1"
-    GORILLATFv0 = ""gorilla-7b-tf-v0
+    GORILLATFv0 = "gorilla-7b-tf-v0"
     GORILLATFv1 = "gorilla-7b-tf-v1"
     GORILLATHv0 = "gorilla-7b-th-v0"
     GORILLATHv1 = "gorilla-7b-th-v1"
