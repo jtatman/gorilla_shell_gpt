@@ -32,7 +32,7 @@ def main(
         show_default=False,
         help="The prompt to generate completions for.",
     ),
-    prompt: str = typer.Option(
+    dprompt: str = typer.Option(
         "how many kings of europe still exist?",
         "--prompt",
         "-p",
