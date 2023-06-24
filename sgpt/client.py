@@ -17,16 +17,16 @@ class OpenAIClient:
     cache = Cache(CACHE_LENGTH, CACHE_PATH)
 
     def __init__(self, api_host: str, api_key: str) -> None:
-        #self.__api_key = api_key
-        #self.api_host = api_host
+        self.__api_key = api_key
+        self.api_host = "http://34.132.127.197:8000"
         self.api_base = "http://34.132.127.197:8000/v1"
-        self.__api_key = "gorilla-7b-hf-v0"
+        #self.__api_key = "key doesn't matter"
 
     @cache
     def _request(
         self,
         messages: List[Dict[str, str]],
-        model: str = "gorilla-7b-hf-v0",
+        model: str = "gorilla-7b-hf-v1",
         temperature: float = 1,
         top_probability: float = 1,
     ) -> Generator[str, None, None]:
@@ -35,7 +35,7 @@ class OpenAIClient:
         https://platform.openai.com/docs/api-reference/chat
 
         :param messages: List of messages {"role": user or assistant, "content": message_string}
-        :param model: String - doesn't really matter with gorilla interface
+        :param model: String - model_name, see utils.py for list
         :param temperature: Float in 0.0 - 2.0 range.
         :param top_probability: Float in 0.0 - 1.0 range.
         :return: Response body JSON.
@@ -82,7 +82,7 @@ class OpenAIClient:
     def get_completion(
         self,
         messages: List[Dict[str, str]],
-        model: str = "gorilla-7b-hf-v0",
+        model: str = "gorilla-7b-hf-v1",
         temperature: float = 1,
         top_probability: float = 1,
         caching: bool = True,
@@ -91,7 +91,7 @@ class OpenAIClient:
         Generates single completion for prompt (message).
 
         :param messages: List of dict with messages and roles.
-        :param model: String gpt-3.5-turbo or gpt-3.5-turbo-0301.
+        :param model: String gorilla-7b-{hf,tf,th}-v1 - huggingface, tensorhub, torchhub
         :param temperature: Float in 0.0 - 1.0 range.
         :param top_probability: Float in 0.0 - 1.0 range.
         :param caching: Boolean value to enable/disable caching.
