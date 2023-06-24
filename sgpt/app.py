@@ -32,6 +32,12 @@ def main(
         show_default=False,
         help="The prompt to generate completions for.",
     ),
+    prompt: str = typer.Option(
+        "how many kings of europe still exist?",
+        "--prompt",
+        "-p",
+        help="the prompt to generate completions for in docker...",
+    ),
     model: ModelOptions = typer.Option(
         ModelOptions(cfg.get("DEFAULT_MODEL")).value,
         help="OpenAI GPT model to use.",
