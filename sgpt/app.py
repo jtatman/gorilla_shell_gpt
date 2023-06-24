@@ -32,12 +32,6 @@ def main(
         show_default=False,
         help="The prompt to generate completions for.",
     ),
-    dprompt: str = typer.Option(
-        "how many kings of europe still exist?",
-        "--prompt",
-        "-p",
-        help="the prompt to generate completions for in docker...",
-    ),
     model: ModelOptions = typer.Option(
         ModelOptions(cfg.get("DEFAULT_MODEL")).value,
         help="OpenAI GPT model to use.",
@@ -136,7 +130,7 @@ def main(
     stdin_passed = not sys.stdin.isatty()
 
     if stdin_passed and not repl:
-        prompt = f"{sys.stdin.read()}\n\n{prompt or ''}"
+        prompt = f"{sys.stdin.read()}\n\n{prompt or dprompt}"
 
     if not prompt and not editor and not repl:
         raise MissingParameter(param_hint="PROMPT", param_type="string")
