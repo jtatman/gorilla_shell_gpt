@@ -1,5 +1,5 @@
 # Contributing to ShellGPT
-Thank you for considering contributing to ShellGPT (sgpt)! In order to ensure a smooth and enjoyable experience for everyone, please follow the steps outlined below.
+Thank you for considering contributing to GorillaShellGPT (sgpt)! In order to ensure a smooth and enjoyable experience for everyone, please follow the steps outlined below.
 
 ## Find an issue to work on
 * First, browse the existing issues to find one that interests you. If you find an issue you would like to work on, assign it to yourself and leave a comment expressing your interest in working on it soon.
@@ -7,7 +7,7 @@ Thank you for considering contributing to ShellGPT (sgpt)! In order to ensure a 
 * If there is an urgent issue, such as a critical bug causing the app to crash, create a pull request right away.
 
 ## Developing
-> ShellGPT is written using strict types, which means you will need to define types. The project utilizes several linting and testing tools: ruff, mypy, isort, black, and pytest.
+> GorillaShellGPT is written using strict types, which means you will need to define types. The project utilizes several linting and testing tools: ruff, mypy, isort, black, and pytest.
 
 ### Virtual environment
 Create a virtual environment using Python venv and activate it:

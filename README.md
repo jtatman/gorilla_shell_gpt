@@ -1,12 +1,14 @@
 ## Gorilla ShellGPT
-this repo attempts to connect sgpt to a public instance of the private model [Gorilla](https://gorilla.cs.berkeley.edu/). everything returned should be a recommended api call and possible code, designed to accomplish some specific technical task within the huggingface, tensorhub, or torchhub universes.
 
-version 2 of the Gorilla model returns code along with the api spec which is allegedly more accurate than many code models. this probably has very specific use cases. this public interface is the property of Berkeley and is subject to their limitations, which are very generous, so probably don't hammer on them accidentally or otherwise. 
+Gorilla ShellGPT is an updated version of ShellGPT for the November 2023 releases of GPT.
 
-adjustments to client.py and utils.py for model names. Could probably be integrated much more easily. also, if desired, use the openai models by passing them from the command line with --model. 
+### New Notes:
 
+Originally this was going to be a facilitation for accessing Berkeley Gorilla Models, but they came up with a much better solution themselves. See this [here](https://github.com/ShishirPatil/gorilla) and [here](https://github.com/gorilla-llm/gorilla-cli)
 
-#### original repo notes
+Since I use this package more than regularly, I'm going to try to update it so that it works (selfishly) and maybe the updates can be used back upstream. 
+
+#### original but updated repo notes
 
 # ShellGPT
 A command-line productivity tool powered by OpenAI's GPT models. As developers, we can leverage AI capabilities to generate shell commands, code snippets, comments, and documentation, among other things. Forget about cheat sheets and notes, with this tool you can get accurate answers right in your terminal, and you'll probably find yourself reducing your daily Google searches, saving you valuable time and effort. ShellGPT is cross-platform compatible and supports all major operating systems, including Linux, macOS, and Windows with all major shells, such as PowerShell, CMD, Bash, Zsh, Fish, and many others.
@@ -17,12 +19,14 @@ https://user-images.githubusercontent.com/16740832/231569156-a3a9f9d4-18b1-4fff-
 ```shell
 pip install gorilla-shell-gpt
 ```
-You'll not really need an OpenAI API key, you can generate one [here](https://beta.openai.com/account/api-keys).
+You'll really need an OpenAI API key, since the beta is long gone. The models are cheap. 
 
 If the`$OPENAI_API_KEY` environment variable is set it will be used, otherwise, you will be prompted for your key which will then be stored in `~/.config/shell_gpt/.sgptrc`.
 
 ## Usage
 `sgpt` has a variety of use cases, including simple queries, shell queries, and code queries.
+I use this personally for attaching files for review on non-critical projects, where I want to improve or ask questions about the code or text, or prompting. 
+
 ### Simple queries
 We can use it as normal search engine, asking about anything:
 ```shell

@@ -18,15 +18,14 @@ class OpenAIClient:
 
     def __init__(self, api_host: str, api_key: str) -> None:
         self.__api_key = api_key
-        self.api_host = "http://34.132.127.197:8000"
-        self.api_base = "http://34.132.127.197:8000/v1"
+        self.api_host = api_host
         #self.__api_key = "key doesn't matter"
 
     @cache
     def _request(
         self,
         messages: List[Dict[str, str]],
-        model: str = "gorilla-7b-tf-v1",
+        model: str = "gpt-4",
         temperature: float = 1,
         top_probability: float = 1,
     ) -> Generator[str, None, None]:
@@ -82,7 +81,7 @@ class OpenAIClient:
     def get_completion(
         self,
         messages: List[Dict[str, str]],
-        model: str = "gorilla-7b-hf-v1",
+        model: str = "gpt-3.5-turbo-instruct",
         temperature: float = 1,
         top_probability: float = 1,
         caching: bool = True,
@@ -91,7 +90,7 @@ class OpenAIClient:
         Generates single completion for prompt (message).
 
         :param messages: List of dict with messages and roles.
-        :param model: String gorilla-7b-{hf,tf,th}-v1 - huggingface, tensorhub, torchhub
+        :param model: String, only uses gpt-3.5-turbo-instruct
         :param temperature: Float in 0.0 - 1.0 range.
         :param top_probability: Float in 0.0 - 1.0 range.
         :param caching: Boolean value to enable/disable caching.

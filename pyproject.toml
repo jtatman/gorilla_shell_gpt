@@ -4,8 +4,8 @@ build-backend = "hatchling.build"
 
 [project]
 name = "gorilla_shell_gpt"
-description = "A command-line productivity tool powered by Gorilla models, will help you develop apis that can be used with OpenAI."
-keywords = ["shell", "gorilla", "berkeley", "gpt", "openai", "cli", "productivity", "cheet-sheet"]
+description = "A command-line productivity tool powered by openai, will help you rock from the command line"
+keywords = ["shell", "gpt", "openai", "cli", "productivity", "cheat-sheet"]
 readme = "README.md"
 license = "MIT"
 requires-python = ">=3.6"
